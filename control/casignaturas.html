@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="express">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SacaNotas Versión Html5</title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/bootstrap-social.css">-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/estilosnav.css">
+    <link href="../css/one-page-wonder.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <!-- Angular JS -->
+    <script src="../angular/angular.min.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Definición del estilo de nav -->
+    <style media="screen">
+        
+
+        .container{
+          background: #2095f2ff;
+          color: white;
+          background-color: #3e50b4;
+        }
+        body{
+           
+          background-color: #3e50b4;
+          
+        }
+        .panel-title{
+
+          color: white;
+        }
+        footer{
+          color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+      <div class="row" align="center">
+       <img src="../img/SacaNotas_01.jpg">
+     </div>
+     <hr>
+
+    <div  class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div  style="background: #3e50b4;" class="panel panel-default ">
+            <div style="background: #3e50b4;" class="panel-heading" role="tab" id="headingOne">
+
+              <h4 class="panel-title ">
+                Listado de  Asignaturas Asignadas
+              </h4>
+            </div>
+
+          </div>
+
+          <div class="table-responsive" ng-controller="micontrolador">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <td>Código</td><td>Unidad Curricular</td> <td>Sección</td><td>Turno</td>
+                </tr>
+
+              </thead>
+              <tbody>
+               <tr ng-repeat="prueba in Lista.integrantes">
+                <td>{{mensaje}}</td><td>{{mensaje2}}</td> <td>{{prueba.Docente}}</td><td>(E)(M)(B)</td>
+
+              </tr>
+            </tbody>
+          </table>
+          </div
+        
+
+        <!-- /Menu Archivos -->
+      </div>
+
+<table>
+  <tr>
+    <td><a href="../index.html" class="btn btn-warning">Regresar</a></td>
+  </tr>
+</table>
+
+  <footer>
+    <p  align="center"> 
+      Elaborado por: Luis Américo Auyadermont Muñoz <br>
+      twitter:@lauyader <br>
+      telegram:@lauyader <br>
+      email: lauyader2011@gmail.com
+    </p>
+  </footer>
+
+
+
+  </div>
+  </div>
+   <!-- /.container -->
+
+<script>
+
+    /**
+    *  Module
+    *
+    * Description
+    */
+    var expresiones=angular.module('express', []);
+    expresiones.controller('micontrolador', function($scope, $http){
+
+
+        $http.get('datos.json')
+          .success(function(datos){
+            $scope.Lista = datos;       
+        });
+      $scope.mensaje="hola mundo";
+      $scope.mensaje2="paso 2";
+      
+    });
+
+</script>
+
+  
+
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

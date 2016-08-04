@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" ng-app="express">
 
 <head>
 
@@ -53,58 +53,61 @@
 </head>
 
 <body>
-     
-<div class="container">
-<div class="row" align="center">
-	<img src="img/SacaNotas_01.jpg">
-</div>
-<hr>
-         
-<div  class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div  style="background: #3e50b4;" class="panel panel-default ">
-    <div style="background: #3e50b4;" class="panel-heading" role="tab" id="headingOne">
 
-      <h4 class="panel-title">
-        <a  class="btn  btn-lg btn-info btn-block glyphicon glyphicon-check"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"  >
-          Control
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div class="container">
+      <div class="row" align="center">
+       <img src="img/SacaNotas_01.jpg">
+     </div>
+     <hr>
+
+     <div  class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div  style="background: #3e50b4;" class="panel panel-default ">
+        <div style="background: #3e50b4;" class="panel-heading" role="tab" id="headingOne">
+
+          <h4 class="panel-title">
+            <a  class="btn  btn-lg btn-info btn-block glyphicon glyphicon-check"  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"  aria-controls="collapseOne">
+              Control
+            </a>
+          </h4>
+        </div>
+
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" >
       <div class="panel-body" align="center">
-         <ul class="list-group">
+             <ul class="list-group">
 
-         	<li class="list-group-item"> 
+              <li class="list-group-item"> 
 
-          <a class="btn btn-info btn-lg glyphicon glyphicon-list-alt" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#myModal1" aria-expanded="false" aria-controls="collapseExample" onclick="mostrar_form2(this)">
-  Asignaturas
-</a>
-  
- </li>
-         	<li class="list-group-item"> <a class="btn btn-info btn-lg glyphicon glyphicon-calendar" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#ChorariosM" aria-expanded="false" aria-controls="collapseExample" onclick="chorarios(this)">
-  Horarios
-</a></li>
-         	<li class="list-group-item"><a class="btn btn-info btn-lg glyphicon glyphicon-ok" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#CasistenciaM" aria-expanded="false" aria-controls="collapseExample" onclick="casistencia(this)">
-  Asistencia
-</a></li>
-         	<li class="list-group-item">   
+                <a class="btn btn-info btn-lg glyphicon glyphicon-list-alt" role="button"  href="control/casignaturas.html"   aria-expanded="false" aria-controls="collapseExample"  >
+                 Asignaturas
+               </a>
 
-<a class="btn btn-info btn-lg glyphicon glyphicon-user" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#CparticipanteM" aria-expanded="false" aria-controls="collapseExample" onclick="cparticipante(this)">
-  Participantes
+             </li>
+             <li class="list-group-item"> <a class="btn btn-info btn-lg glyphicon glyphicon-calendar" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#ChorariosM" aria-expanded="false" aria-controls="collapseExample" onclick="chorarios(this)">
+               Horarios
+             </a>
+           </li>
+           <li class="list-group-item"><a class="btn btn-info btn-lg glyphicon glyphicon-ok" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#CasistenciaM" aria-expanded="false" aria-controls="collapseExample" onclick="casistencia(this)">
+               Asistencia
+             </a>
+           </li>
+           <li class="list-group-item">   
 
-</a>
+           <a class="btn btn-info btn-lg glyphicon glyphicon-user" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#CparticipanteM" aria-expanded="false" aria-controls="collapseExample" onclick="cparticipante(this)">
+             Participantes
 
-</li>
-         	 
-         	
-         </ul>
+           </a>
 
-      </div>
-    </div>
-  </div>
+           </li>
 
 
-  <div class="panel panel-default">
+       </ul>
+
+     </div>
+     </div>
+   </div>
+
+   <!--Menu Academico -->
+   <div class="panel panel-default">
     <div style="background: #3e50b4;" class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">
         <a class="collapsed btn btn-warning btn-lg btn-block glyphicon glyphicon-book" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -116,21 +119,25 @@
       <div style="background: #3e50b4;" class="panel-body" align="center">
        <ul class="list-group">
 
-          
-         	<li class="list-group-item"> <a class="btn btn-warning btn-lg glyphicon glyphicon-check" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
-  Evaluación
-</a></li>
-         	<li  class="list-group-item"> <a  class="btn btn-warning btn-lg glyphicon glyphicon-print" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
-  Informenes
-</a></li>
-         	 
-         	 
-         	
-         </ul>
-         
-      </div>
+
+        <li class="list-group-item"> <a class="btn btn-warning btn-lg glyphicon glyphicon-check" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+          Evaluación
+        </a></li>
+        <li  class="list-group-item"> <a  class="btn btn-warning btn-lg glyphicon glyphicon-print" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+          Informenes
+        </a>
+        </li>
+
+
+
+      </ul>
+
     </div>
   </div>
+  </div>
+  <!-- /Menu academico -->
+
+  <!-- Menu Redes sociales -->
 
 
 
@@ -147,29 +154,33 @@
 
     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       <div style="background: #3e50b4;" class="panel-body" align="center">
-         <ul class="list-group">
+       <ul class="list-group">
 
-         	<li class="list-group-item"> <a class="btn btn-primary btn-lg fa fa-twitter" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Twitter
-</a></li>
-         	<li class="list-group-item"> <a class="btn btn-primary btn-lg fa fa-youtube" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Youtube
-</a></li>
-         	<li class="list-group-item"> <a class="btn btn-primary btn-lg fa fa-facebook" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Facebook
-</a></li>
-         	<li class="list-group-item">  <a class="btn btn-primary btn-lg fa fa-google-plus" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Google plus
-</a></li>
-         	 
-         	
-         </ul>
-      </div>
+        <li class="list-group-item"> <a class="btn btn-primary btn-lg fa fa-twitter" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Twitter
+        </a></li>
+        <li class="list-group-item"> <a class="btn btn-primary btn-lg fa fa-youtube" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Youtube
+        </a></li>
+        <li class="list-group-item"> <a class="btn btn-primary btn-lg fa fa-facebook" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Facebook
+        </a></li>
+        <li class="list-group-item">  <a class="btn btn-primary btn-lg fa fa-google-plus" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Google plus
+        </a></li>
+
+
+      </ul>
     </div>
+  </div>
 
   </div>
 
 
+
+  <!-- /Menu Redes sociales -->
+
+  <!-- Menu Archivos -->
 
   <div style="background: #3e50b4;" class="panel panel-default">
     <div style="background: #3e50b4;" class="panel-heading" role="tab" id="Archivos">
@@ -184,164 +195,170 @@
 
     <div style="background: #3e50b4;" id="Archivos2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       <div style="background: #3e50b4;" class="panel-body" align="center">
-         <ul class="list-group">
+       <ul class="list-group">
 
-         	<li class="list-group-item"> <a class="btn btn-danger btn-lg glyphicon glyphicon-import" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Importar
-</a></li>
-         	<li class="list-group-item"> <a class="btn btn-danger btn-lg glyphicon glyphicon-export" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Exportar
-</a></li>
-         	
-         	 
-         	 
-         	
-         </ul>
-      </div>
+        <li class="list-group-item"> <a class="btn btn-danger btn-lg glyphicon glyphicon-import" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Importar
+        </a></li>
+        <li class="list-group-item"> <a class="btn btn-danger btn-lg glyphicon glyphicon-export" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Exportar
+        </a></li>
+
+
+
+
+      </ul>
     </div>
+  </div>
 
+      <!-- /Menu Archivos -->
   </div>
 
 
- 
-<footer>
-<p align="center"> 
-Elaborado por: Luis Américo Auyadermont Muñoz <br>
-twitter:@lauyader <br>
-telegram:@lauyader <br>
-email: lauyader2011@gmail.com
-  </p>
-</footer>
-  
+
+  <footer>
+    <p align="center"> 
+      Elaborado por: Luis Américo Auyadermont Muñoz <br>
+      twitter:@lauyader <br>
+      telegram:@lauyader <br>
+      email: lauyader2011@gmail.com
+    </p>
+  </footer>
 
 
-</div>
 
-</div>
+  </div>
+  </div>
+   <!-- /.container -->
 
- <!--funcion de la ventana modal Control de Asignaturas-->
-<div id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title">Periodo:?</h4>
-</div>
-<!--*************************************************-->
-<div class="modal-body" id="frm_suma">
-<!--no tocar esta parte-->
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-<button type="button" class="btn btn-primary">Guardar</button>
-</div>
-</div>
-</div>
-</div>
-<!--*************************************************-->
+    <!--funcion de la ventana modal Control de Asignaturas-->
+    <div  ng-app="express" id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Periodo:?</h4>
+          </div>
+          <!--*************************************************-->
+          <div ng-controller="micontrolador" class="modal-body" id="frm_suma">
+            <!--no tocar esta parte-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--*************************************************-->
 
 
- <!--funcion de la ventana modal Contro de Horarios-->
-<div id="ChorariosM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title">Horarios de las Asignaturas</h4>
-</div>
-<!--*************************************************-->
-<div class="modal-body" id="frm_suma2">
-<!--no tocar esta parte-->
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-<button type="button" class="btn btn-primary">Guardar</button>
-</div>
-</div>
-</div>
-</div>
-<!--*************************************************-->
- <!--funcion de la ventana modal Contro de Asistencia-->
-<div id="CasistenciaM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title">Control de Asistencia</h4>
-</div>
-<!--*************************************************-->
-<div class="modal-body" id="frm_suma3">
-<!--no tocar esta parte-->
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-<button type="button" class="btn btn-primary">Guardar</button>
-</div>
-</div>
-</div>
-</div>
-<!--*************************************************-->
+    <!--funcion de la ventana modal Contro de Horarios-->
+    <div id="ChorariosM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Horarios de las Asignaturas</h4>
+          </div>
+          <!--*************************************************-->
+          <div class="modal-body" id="frm_suma2">
+            <!--no tocar esta parte-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--*************************************************-->
+    <!--funcion de la ventana modal Contro de Asistencia-->
+    <div id="CasistenciaM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Control de Asistencia</h4>
+          </div>
+          <!--*************************************************-->
+          <div class="modal-body" id="frm_suma3">
+            <!--no tocar esta parte-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--*************************************************-->
 
- <!--funcion de la ventana modal Contro de Participantes-->
-<div id="CparticipanteM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-<h4 class="modal-title">Control de Participantes</h4>
-</div>
-<!--*************************************************-->
-<div class="modal-body" id="frm_suma4">
-<!--no tocar esta parte-->
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-<button type="button" class="btn btn-primary">Guardar</button>
-</div>
-</div>
-</div>
-</div>
+    <!--funcion de la ventana modal Contro de Participantes-->
+    <div id="CparticipanteM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Control de Participantes</h4>
+          </div>
+          <!--*************************************************-->
+          <div class="modal-body" id="frm_suma4">
+            <!--no tocar esta parte-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 <!--*************************************************-->
 <!--*************************************************-->
 <!--funcion del script de la ventana modal-->
 <script>
-function mostrar_form2(url){
-  var url_temp = new Array();
-  urltetmp=url.href.split("#");
-  $("#myModal6").modal({backdrop:false});
-  $("#frm_suma").load("modales/control/Casignaturas.html");
-}
+  function mostrar_form2(url){
+     
+    var url_temp = new Array();
+    urltetmp=url.href.split("#");
+    $("#myModal6").modal({backdrop:false});
+    $("#frm_suma").load("modales/control/Casignaturas.html");
+  }
 
 
-function chorarios(url){
- 
-  var url_temp = new Array();
-  urltetmp=url.href.split("#");
-  $("#myModal6").modal({backdrop:false});
-  $("#frm_suma2").load("modales/control/Chorarios.html");
-}
+  function chorarios(url){
 
-function casistencia(url){
- console.log("paso")
-  var url_temp = new Array();
-  urltetmp=url.href.split("#");
-  $("#myModal6").modal({backdrop:false});
-  $("#frm_suma3").load("modales/control/Casistencia.html");
-}
+    var url_temp = new Array();
+    urltetmp=url.href.split("#");
+    $("#myModal6").modal({backdrop:false});
+    $("#frm_suma2").load("modales/control/Chorarios.html");
+  }
+
+  function casistencia(url){
+   console.log("paso")
+   var url_temp = new Array();
+   urltetmp=url.href.split("#");
+   $("#myModal6").modal({backdrop:false});
+   $("#frm_suma3").load("modales/control/Casistencia.html");
+ }
 
 
-function cparticipante(url){
- console.log("paso")
-  var url_temp = new Array();
-  urltetmp=url.href.split("#");
-  $("#myModal6").modal({backdrop:false});
-  $("#frm_suma4").load("modales/control/Cparticipante.html");
-}
+ function cparticipante(url){
+   
+   var url_temp = new Array();
+   urltetmp=url.href.split("#");
+   $("#myModal6").modal({backdrop:false});
+   $("#frm_suma4").load("modales/control/Cparticipante.html");
+
+ }
+
+
 
 
 </script>
 
+  <!-- /.Modales -->
 
-
-    <!-- /.container -->
+    <!-- Angular JS -->
+    <script src="js/angular.min.js"></script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -351,38 +368,38 @@ function cparticipante(url){
 
     <!-- Script para el Scroll Suave -->
     <script>
-    $(document).ready(function(){
-    // Add smooth scrolling to all links in navbar + footer link
-    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-        // Store hash
-        var hash = this.hash;
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 900, function(){
+      $(document).ready(function(){
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+          // Store hash
+          var hash = this.hash;
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function(){
 
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
 
-    $(window).scroll(function() {
-      $(".slideanim").each(function(){
-        var pos = $(this).offset().top;
-        var winTop = $(window).scrollTop();
+      $(window).scroll(function() {
+        $(".slideanim").each(function(){
+          var pos = $(this).offset().top;
+          var winTop = $(window).scrollTop();
           if (pos < winTop + 600) {
             $(this).addClass("slide");
           }
+        });
       });
-    });
-  })
-    </script>
+    })
+  </script>
 
 
 
