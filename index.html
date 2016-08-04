@@ -33,114 +33,7 @@
 
     <!-- Definición del estilo de nav -->
     <style media="screen">
-        .navbar-inverse {
-            background-color: #80122B t
-        }
-
-        .navbar-inverse .navbar-nav>.active>a:hover,
-        .navbar-inverse .navbar-nav>li>a:hover,
-        .navbar-inverse .navbar-nav>li>a:focus {
-            background-color: #AD0909
-        }
-
-        .navbar-inverse .navbar-nav>.active>a,
-        .navbar-inverse .navbar-nav>.open>a,
-        .navbar-inverse .navbar-nav>.open>a,
-        .navbar-inverse .navbar-nav>.open>a:hover,
-        .navbar-inverse .navbar-nav>.open>a,
-        .navbar-inverse .navbar-nav>.open>a:hover,
-        .navbar-inverse .navbar-nav>.open>a:focus {
-            background-color: #CC3338
-        }
-
-        .dropdown-menu {
-            background-color: #80122B
-        }
-
-        .dropdown-menu>li>a:hover,
-        .dropdown-menu>li>a:focus {
-            background-color: #CC3338
-        }
-
-        .navbar-inverse {
-            background-image: none;
-        }
-
-        .dropdown-menu>li>a:hover,
-        .dropdown-menu>li>a:focus {
-            background-image: none;
-        }
-
-        .navbar-inverse {
-            border-color: #696969
-        }
-
-        .navbar-inverse .navbar-brand {
-            color: #FFFFFF
-        }
-
-        .navbar-inverse .navbar-brand:hover {
-            color: #FFFFFF
-        }
-
-        .navbar-inverse .navbar-nav>li>a {
-            color: #DEDEDE
-        }
-
-        .navbar-inverse .navbar-nav>li>a:hover,
-        .navbar-inverse .navbar-nav>li>a:focus {
-            color: #FFFFFF
-        }
-
-        .navbar-inverse .navbar-nav>.active>a,
-        .navbar-inverse .navbar-nav>.open>a,
-        .navbar-inverse .navbar-nav>.open>a:hover,
-        .navbar-inverse .navbar-nav>.open>a:focus {
-            color: #FFFFFF
-        }
-
-        .navbar-inverse .navbar-nav>.active>a:hover,
-        .navbar-inverse .navbar-nav>.active>a:focus {
-            color: #FFFFFF
-        }
-
-        .dropdown-menu>li>a {
-            color: #FAFAFA
-        }
-
-        .dropdown-menu>li>a:hover,
-        .dropdown-menu>li>a:focus {
-            color: #FFFFFF
-        }
-
-        .navbar-inverse .navbar-nav>.dropdown>a .caret {
-            border-top-color: #999999
-        }
-
-        .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
-            border-top-color: #FFFFFF
-        }
-
-        .navbar-inverse .navbar-nav>.dropdown>a .caret {
-            border-bottom-color: #999999
-        }
-
-        .navbar-inverse .navbar-nav>.dropdown>a:hover .caret {
-            border-bottom-color: #FFFFFF
-        }
-
-
-        .copy-left {
-            display: inline-block;
-            text-align: right;
-            margin: 0px;
-            -moz-transform: scaleX(-1);
-            -o-transform: scaleX(-1);
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-            filter: FlipH;
-            -ms-filter: "FlipH";
-        }
+        
 
         .container{
           background: #2095f2ff;
@@ -181,18 +74,27 @@
       <div class="panel-body" align="center">
          <ul class="list-group">
 
-         	<li class="list-group-item"> <a class="btn btn-info btn-lg glyphicon glyphicon-list-alt" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+         	<li class="list-group-item"> 
+
+          <a class="btn btn-info btn-lg glyphicon glyphicon-list-alt" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#myModal1" aria-expanded="false" aria-controls="collapseExample" onclick="mostrar_form2(this)">
   Asignaturas
-</a></li>
-         	<li class="list-group-item"> <a class="btn btn-info btn-lg glyphicon glyphicon-calendar" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+</a>
+  
+ </li>
+         	<li class="list-group-item"> <a class="btn btn-info btn-lg glyphicon glyphicon-calendar" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#ChorariosM" aria-expanded="false" aria-controls="collapseExample" onclick="chorarios(this)">
   Horarios
 </a></li>
-         	<li class="list-group-item"> <a class="btn btn-info btn-lg glyphicon glyphicon-ok" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+         	<li class="list-group-item"><a class="btn btn-info btn-lg glyphicon glyphicon-ok" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#CasistenciaM" aria-expanded="false" aria-controls="collapseExample" onclick="casistencia(this)">
   Asistencia
 </a></li>
-         	<li class="list-group-item">  <a class="btn btn-info btn-lg glyphicon glyphicon-user" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+         	<li class="list-group-item">   
+
+<a class="btn btn-info btn-lg glyphicon glyphicon-user" role="button" data-toggle="modal" href="modales/#modal.html" data-target="#CparticipanteM" aria-expanded="false" aria-controls="collapseExample" onclick="cparticipante(this)">
   Participantes
-</a></li>
+
+</a>
+
+</li>
          	 
          	
          </ul>
@@ -314,6 +216,129 @@ email: lauyader2011@gmail.com
 </div>
 
 </div>
+
+ <!--funcion de la ventana modal Control de Asignaturas-->
+<div id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Periodo:?</h4>
+</div>
+<!--*************************************************-->
+<div class="modal-body" id="frm_suma">
+<!--no tocar esta parte-->
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+<button type="button" class="btn btn-primary">Guardar</button>
+</div>
+</div>
+</div>
+</div>
+<!--*************************************************-->
+
+
+ <!--funcion de la ventana modal Contro de Horarios-->
+<div id="ChorariosM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Horarios de las Asignaturas</h4>
+</div>
+<!--*************************************************-->
+<div class="modal-body" id="frm_suma2">
+<!--no tocar esta parte-->
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+<button type="button" class="btn btn-primary">Guardar</button>
+</div>
+</div>
+</div>
+</div>
+<!--*************************************************-->
+ <!--funcion de la ventana modal Contro de Asistencia-->
+<div id="CasistenciaM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Control de Asistencia</h4>
+</div>
+<!--*************************************************-->
+<div class="modal-body" id="frm_suma3">
+<!--no tocar esta parte-->
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+<button type="button" class="btn btn-primary">Guardar</button>
+</div>
+</div>
+</div>
+</div>
+<!--*************************************************-->
+
+ <!--funcion de la ventana modal Contro de Participantes-->
+<div id="CparticipanteM" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Control de Participantes</h4>
+</div>
+<!--*************************************************-->
+<div class="modal-body" id="frm_suma4">
+<!--no tocar esta parte-->
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+<button type="button" class="btn btn-primary">Guardar</button>
+</div>
+</div>
+</div>
+</div>
+<!--*************************************************-->
+<!--*************************************************-->
+<!--funcion del script de la ventana modal-->
+<script>
+function mostrar_form2(url){
+  var url_temp = new Array();
+  urltetmp=url.href.split("#");
+  $("#myModal6").modal({backdrop:false});
+  $("#frm_suma").load("modales/control/Casignaturas.html");
+}
+
+
+function chorarios(url){
+ 
+  var url_temp = new Array();
+  urltetmp=url.href.split("#");
+  $("#myModal6").modal({backdrop:false});
+  $("#frm_suma2").load("modales/control/Chorarios.html");
+}
+
+function casistencia(url){
+ console.log("paso")
+  var url_temp = new Array();
+  urltetmp=url.href.split("#");
+  $("#myModal6").modal({backdrop:false});
+  $("#frm_suma3").load("modales/control/Casistencia.html");
+}
+
+
+function cparticipante(url){
+ console.log("paso")
+  var url_temp = new Array();
+  urltetmp=url.href.split("#");
+  $("#myModal6").modal({backdrop:false});
+  $("#frm_suma4").load("modales/control/Cparticipante.html");
+}
+
+
+</script>
+
 
 
     <!-- /.container -->
